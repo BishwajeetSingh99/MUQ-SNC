@@ -1069,6 +1069,7 @@ def worker_evaluate(zeta_vector, species_info,
 
 
 ################################################### USE THIS APPROACH FOR THERMO OPTIMIZATION################################
+########################################################################################## EXAMPLE H2CO  #########################################
 
 import os
 import numpy as np
@@ -1083,7 +1084,7 @@ preds_fail_counter = 0
 # =========================================================
 # PRS SETTINGS
 # =========================================================
-PRS_FOLDER = "/path/to/prs_coefficients"   # <-- UPDATE
+PRS_FOLDER = "/home/user/Desktop/thermo_param_opt_new/prs-and_opti_with_actual_param/PRS_SURROGATE_MODEL/trial_3_split_90_10"   # <-- UPDATE
 VALID_CASES = list(range(72))              # <-- UPDATE if needed
 
 # =========================================================
@@ -1341,7 +1342,7 @@ def main():
     # =========================================================
     # 🔴 LOAD SPECIES DATA (NEW PART)
     # =========================================================
-    species_list = ["H2", "O2", "OH"]   # <-- UPDATE THIS
+    species_list = ["HO2", "H2", "O2", "H2O", "CO", "C", "HCO", "OH*", "H"]  # <-- example species list , update this as per requirement
     species_info = load_thermo_data(species_list)
 
     # =========================================================
